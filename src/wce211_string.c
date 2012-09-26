@@ -56,10 +56,13 @@ _CRTIMP int __cdecl _strnicmp(const char* s1, const char* s2, size_t n)
 _CRTIMP char* __cdecl strrchr(const char* s, int c)
 {
 	const char*	p = s + strlen(s) - 1;
-	while (p >= s)
+	char *t_s = s;
+	char *t_p = p;
+	while (t_p >= t_s)
 	{
-		if (*p == c)
+		if (*t_p == c)
 			return (char*)p;
+		t_p--;
 	}
 	return NULL;
 }
