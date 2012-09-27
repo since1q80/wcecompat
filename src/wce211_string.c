@@ -61,7 +61,7 @@ _CRTIMP char* __cdecl strrchr(const char* s, int c)
 	while (t_p >= t_s)
 	{
 		if (*t_p == c)
-			return (char*)p;
+			return (char*)t_p;
 		t_p--;
 	}
 	return NULL;
